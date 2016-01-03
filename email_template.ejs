@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <meta charset='utf-8'>
+  </head>
+  <body>
+    <p>Hey there <%= firstName %>,</p>
+    <br>
+    <p>
+      I hope all is well! It looks like it has been <%= numMonthsSinceContact %> months
+      since we last talked. I just started school at Fullstack Academy, where I'm learning to code full-time.
+    </p>
+    <p>
+      I've started blogging about my experiences at Fullstack on my blog.
+      Feel free to check out my latest posts here:
+      <ul>
+      <% for (var i=0; i<latestPosts.length; i++) { %>
+        <li>
+          <a href=<%= latestPosts[i].post_url %>><%= latestPosts[i].title %></a>
+        </li>
+      <% } %>
+      </ul>
+    </p>
+    <p>
+      Cheers!<br>
+      Jeremy
+    </p>
+  </body>
+</html>
